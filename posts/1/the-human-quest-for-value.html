@@ -31,7 +31,7 @@
       .was-spoiler p { margin: 0px; }
       .not-supported { display: none; }
       .footer { text-align: right; }
-     
+
       /* Other */
       .spoiler-alert:after { content: " (Click here.)"; }
     </style>
@@ -130,15 +130,28 @@
 
       <div class="spoiler was-spoiler">
         <p class="spoiler-alert">SPOILER ALERT</p>
-        <p>In the just-released space thriller, Gravity, I first start to relate to Ryan as she struggles with her project, which seems to be hopelessly malfunctioning. I also start to relate to Kowalski. Even though he seems very in control and skilled, he's humble. I connect with both of them further during the first debris storm, which is horrific and finds them totally exposed to unpredictable, lethal danger. If I were in that situation, I would be thinking that my chances of not being hit and surviving are very small. In a way this is a state of destitution, where all they have left is their mind, their body, their suit, each other (though they can offer no physical protection to one another), and hope for good luck.</p>
-        <p>By the end of the movie, after seeing Ryan ceaselessly yo-yoed from dire emergency to temporary safety for over an hour, I related so completely that merely her <em>standing up</em> on the shore felt equal to any other triumph I have ever experienced in a film.</p>
+        <p>In the just-released space thriller, Gravity, I first start to relate to Ryan as she struggles with her project, which seems to be hopelessly malfunctioning. I also start to relate to Kowalski. Even though he seems very in control and skilled, he's humble. I connect with both of them further during the first debris storm, which is horrific and finds them totally exposed to unpredictable, lethal danger. If I was in that situation, I would be thinking that my chances of surviving are very small. In a way this is a state of destitution, where all they have left is their mind, their body, their suit, each other (though they can offer no physical protection to one another), and hope for good luck.</p>
+        <p>By the end of the movie, after seeing Ryan ceaselessly yo-yoed from dire emergency to temporary safety for over an hour, I relate so completely that merely her <em>standing up</em> on the shore feels equal to any other triumph I have ever experienced in a film.</p>
       </div>
     </div>
-    <!--<div class="comments">
+    <div class="comments">
       <h2>Comments</h2>
-    </div>-->
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        // Disqus config
+      var disqus_shortname = 'davidwblog';
+      // Disqus
+      (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+       })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
     <div class="footer">
-      <p><a href="http://github.com/">Hosted on Github.</a> Copyright 2013 David Winiecki.</p>
+      <p><a href="https://github.com/Vinietskyzilla/dw-blog">Hosted on Github.</a> Copyright 2013 David Winiecki.</p>
     </div>
     <script>
       var spoilers = document.getElementsByClassName('spoiler');
