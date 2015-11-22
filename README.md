@@ -1,4 +1,4 @@
-To see the site live, visit http://vinietskyzilla.github.io/dw-blog
+To see the site live, visit http://dcki.github.io/dw-blog
 
 To learn how to create a project like this one, see
 
