@@ -1,0 +1,30 @@
+For software developers:
+
+Suppose you have a Linux system with multiple users, and you want some users to be able to modify a certain file or files (a database for example) in limited ways, without giving them complete permission to modify it however they want, directly (like with a text editor). This is the kind of thing the setuid file permission flag is good for.
+
+Here is an example:
+
+1. Make sure the file you are protecting can only be written by the owner.
+$ chmod og-w data_file
+
+2. Create an executable file that makes the kind of changes you want to the data file.
+
+3. Make the owner of the data file own the executable.
+$ chown user:users_group executable_file
+
+4. Make the executable read-only for everyone.
+$ chmod uog-w executable_file
+
+5. Give all users permission to execute the executable.
+$ chmod uog+x executable_file
+
+Now anyone can run the executable, but the executable will only have permission to modify the data file when it is run by the owner of the data file.
+
+6. Set the setuid flag on the executable.
+$ chmod u+s executable_file
+
+Now anyone can run the executable, and no matter who runs it, the executable will have permission to modify the data file.
+
+You can use this same technique to create executables that allow non-owners to have limited access to protected network ports, or to allow users to write new files into protected directories.
+
+I read that the passwd and ping commands use setuid and that appears to be true on Ubuntu Linux. However on OS X that is not so, though OS X has setuid. That's why I specifically said Linux at the beginning of this. I'm not sure how OS X handles this problem.
